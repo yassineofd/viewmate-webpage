@@ -113,55 +113,30 @@ h3 { margin: 16px 0 10px; font-size: 1.15rem; letter-spacing: -.01em; }
 .chips li { font-size: .85rem; font-weight: 600; padding: 6px 14px; border-radius: 999px; background: var(--surface); border: 1px solid var(--outline-soft); color: var(--muted); }
 .fine { font-size: .85rem; color: var(--muted); margin: 0; }
 
-/* Phone mockup */
+/* Phone with app screens */
 .stage { position: relative; display: grid; place-items: center; padding: 20px 0; }
 .glow { position: absolute; width: 80%; aspect-ratio: 1; border-radius: 50%; background: radial-gradient(closest-side, color-mix(in srgb, var(--accent) 35%, transparent), transparent); filter: blur(30px); }
 .phone {
-  position: relative; width: min(290px, 70vw); aspect-ratio: 9 / 18.5;
-  background: #0a0f14; border-radius: 38px; padding: 9px;
-  box-shadow: var(--shadow), inset 0 0 0 2px #2b3946;
-  transform: rotate(3deg);
+  position: relative; width: min(300px, 70vw); padding: 9px; border-radius: 46px;
+  background: linear-gradient(150deg, #3a5078 0%, #162238 28%, #0b1322 60%, #1d2d4a 100%);
+  box-shadow: var(--shadow), inset 0 0 0 1.5px #5f7aa3, inset 0 0 0 4px #0b1322, 18px 30px 60px rgba(0, 0, 0, .45);
+  transform: perspective(1400px) rotateY(-14deg) rotateZ(3deg);
 }
-.screen { position: relative; height: 100%; border-radius: 30px; overflow: hidden; background: #dde3e8; display: flex; flex-direction: column; }
-.screen::before { content: ""; position: absolute; top: 9px; left: 50%; translate: -50% 0; width: 22px; height: 22px; border-radius: 50%; background: #0a0f14; z-index: 3; }
-.appbar { background: #101820; color: #f4f7fa; padding: 40px 14px 12px; display: flex; align-items: center; gap: 10px; font-size: .72rem; font-weight: 700; }
-.ab-back { width: 10px; height: 10px; border-left: 2px solid #a5b2bf; border-bottom: 2px solid #a5b2bf; rotate: 45deg; margin-left: 4px; }
-.ab-title { flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.ab-icons { display: flex; gap: 6px; }
-.ab-icons i { width: 13px; height: 13px; border-radius: 4px; background: #75d5e8; opacity: .85; }
-.ab-icons i:nth-child(2) { background: #8b9dff; }
-.ab-icons i:nth-child(3) { background: #a5b2bf; }
-.reader { flex: 1; padding: 14px 14px 0; position: relative; }
-.page { background: #fff; height: 100%; border-radius: 6px 6px 0 0; padding: 18px 16px; box-shadow: 0 4px 14px rgba(0,0,0,.18); position: relative; }
-.ln { height: 6px; border-radius: 3px; background: #c9d1d9; margin-bottom: 11px; }
-.ln.bold { height: 9px; background: #5b6b7c; margin-bottom: 16px; }
-.ln.hl { background: #c9d1d9; box-shadow: 0 0 0 4px #fff3a0; background-clip: padding-box; position: relative; z-index: 0; }
-.ln.ul { border-bottom: 2px solid #4b5bd1; height: 8px; background: #c9d1d9; background-clip: content-box; }
-.w100 { width: 100%; } .w92 { width: 92%; } .w86 { width: 86%; } .w78 { width: 78%; } .w64 { width: 64%; } .w60 { width: 60%; }
-.sticky { position: absolute; right: -6px; top: 118px; width: 92px; background: #ffe48a; color: #4a3b00; font-size: .58rem; font-weight: 700; line-height: 1.3; padding: 7px 8px; border-radius: 4px; box-shadow: 0 6px 12px rgba(0,0,0,.2); rotate: 4deg; }
-.sticky b { display: block; font-size: .52rem; text-transform: uppercase; letter-spacing: .08em; opacity: .7; }
-.sig { position: absolute; left: 14px; bottom: 26px; width: 110px; border-top: 1px solid #c9d1d9; padding-top: 2px; }
-.scrub { position: absolute; right: 8px; bottom: 56px; display: flex; align-items: center; gap: 6px; }
-.scrub span { width: 4px; height: 70px; border-radius: 2px; background: rgba(16,24,32,.25); }
-.scrub em { font-style: normal; font-size: .55rem; font-weight: 800; background: #101820; color: #f4f7fa; padding: 3px 7px; border-radius: 99px; }
-.toolbar { background: #19242e; display: flex; justify-content: space-around; align-items: center; padding: 12px 10px 16px; }
-.toolbar .t { width: 20px; height: 20px; border-radius: 7px; background: #34424f; }
-.toolbar .t.on { background: #75d5e8; }
-
-.float {
-  position: absolute; display: flex; align-items: center; gap: 8px;
-  background: var(--surface); border: 1px solid var(--outline); color: var(--text);
-  padding: 9px 14px; border-radius: 14px; font-size: .82rem; font-weight: 700;
-  box-shadow: var(--shadow);
-}
-.float .dot { width: 9px; height: 9px; border-radius: 50%; }
-.dot.c { background: var(--accent); } .dot.p { background: var(--accent-2); }
-.f1 { left: -4%; top: 22%; } .f2 { right: -2%; bottom: 20%; }
+.phone::after { content: ""; position: absolute; right: -3px; top: 27%; width: 4px; height: 12%; border-radius: 0 3px 3px 0; background: linear-gradient(#5f7aa3, #2a3d5e); }
+.shots { position: relative; aspect-ratio: 540 / 1170; border-radius: 38px; overflow: hidden; background: #0a0f14; }
+.shots img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; }
+.shots img:first-child { opacity: 1; }
 @media (prefers-reduced-motion: no-preference) {
-  .f1 { animation: bob 6s ease-in-out infinite; }
-  .f2 { animation: bob 7s ease-in-out -2s infinite; }
+  .shots img { animation: shot 15s infinite; }
+  .shots img:first-child { animation-delay: -.6s; }
+  .shots img:nth-child(2) { animation-delay: 5s; }
+  .shots img:nth-child(3) { animation-delay: 10s; }
 }
-@keyframes bob { 50% { transform: translateY(-8px); } }
+@keyframes shot {
+  0% { opacity: 0; }
+  4%, 31% { opacity: 1; }
+  36%, 100% { opacity: 0; }
+}
 
 /* Strip */
 .strip { border-block: 1px solid var(--outline-soft); background: var(--surface); }
@@ -263,8 +238,7 @@ details p { margin: 0 0 18px; color: var(--muted); }
   .hero-copy .lede { margin-inline: auto; }
   .cta, .chips { justify-content: center; }
   .stage { order: -1; margin-bottom: 8px; }
-  .phone { width: min(250px, 62vw); }
-  .f1 { left: 2%; } .f2 { right: 2%; }
+  .phone { width: min(260px, 64vw); }
   .steps { grid-template-columns: 1fr; }
   .privacy-in .cta { justify-content: flex-start; }
 }
@@ -285,10 +259,8 @@ details p { margin: 0 0 18px; color: var(--muted); }
   .foot-in { flex-direction: column; align-items: flex-start; }
 }
 @media (max-width: 400px) {
-  .phone { width: min(220px, 64vw); border-radius: 32px; padding: 8px; }
-  .screen { border-radius: 25px; }
-  .float { font-size: .74rem; padding: 7px 10px; }
-  .f1 { left: 0; top: 16%; } .f2 { right: 0; bottom: 14%; }
+  .phone { width: min(230px, 64vw); border-radius: 38px; padding: 8px; }
+  .shots { border-radius: 31px; }
   .chips li { font-size: .8rem; padding: 5px 12px; }
   .steps li > span { width: 30px; height: 30px; }
 }
