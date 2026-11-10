@@ -209,6 +209,44 @@ h3 { margin: 16px 0 10px; font-size: 1.15rem; letter-spacing: -.01em; }
 .foot .fine a:hover, .foot .fine a[aria-current] { color: var(--text); }
 @media (max-width: 620px) { .toc ol { columns: 1; } }
 
+/* About and Contact pages */
+.nav nav a[aria-current] { color: var(--text); }
+.page-hero { padding: clamp(36px, 6vw, 64px) 0 0; }
+.page-hero h1 { font-size: clamp(2rem, 5vw, 3.2rem); }
+.page-hero .lede { margin-bottom: 0; }
+.about-body { padding-top: clamp(32px, 5vw, 48px); }
+.about-body h2 { font-size: 1.6rem; margin: 40px 0 12px; }
+.about-body > .wrap > h2:first-child { margin-top: 0; }
+.about-body p { color: var(--muted); }
+.about-body a, .contact-body a:not(.btn) { color: var(--accent); }
+.values { grid-template-columns: 1fr; margin-top: 16px; }
+.values .card p { margin: 0; font-size: .96rem; }
+.cta-band {
+  margin-top: 48px; padding: clamp(20px, 4vw, 32px);
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px;
+  background: var(--surface); border: 1px solid var(--outline-soft); border-radius: var(--radius);
+}
+.cta-band h2 { margin: 0 0 4px; font-size: 1.4rem; }
+.cta-band p { margin: 0; }
+
+.contact-body { padding-top: clamp(32px, 5vw, 48px); }
+.contact-grid { display: grid; grid-template-columns: 1.3fr 1fr; gap: 24px; align-items: start; }
+.contact-side { display: grid; gap: 20px; }
+.contact-side h3 { margin-top: 14px; }
+.contact-side p { margin: 0 0 8px; color: var(--muted); font-size: .96rem; }
+.contact-form h2 { font-size: 1.5rem; }
+.contact-form label { display: block; margin: 18px 0 6px; font-weight: 700; font-size: .92rem; }
+.contact-form input, .contact-form select, .contact-form textarea {
+  width: 100%; font: inherit; color: var(--text); background: var(--bg);
+  border: 1.5px solid var(--outline); border-radius: 12px; padding: 12px 14px; min-height: 48px;
+}
+.contact-form textarea { resize: vertical; min-height: 140px; }
+.contact-form input:focus-visible, .contact-form select:focus-visible, .contact-form textarea:focus-visible {
+  outline: 3px solid var(--accent-2); outline-offset: 2px; border-color: transparent;
+}
+.contact-form .btn { margin-top: 24px; cursor: pointer; }
+.contact-form .fine { margin-top: 14px; }
+@media (max-width: 920px) { .contact-grid { grid-template-columns: 1fr; } }
 /* Download */
 .dl {
   display: flex; align-items: center; gap: clamp(20px, 4vw, 36px);
